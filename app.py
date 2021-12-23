@@ -140,6 +140,11 @@ def predict():
 
         prediction=model.predict([[targeted_productivity,smv,wip,over_time,incentive,idle_time,no_of_style_change,no_of_workers,team, idle_men, quarter_Quarter1, quarter_Quarter2, quarter_Quarter3, quarter_Quarter4, quarter_Quarter5, department_sewing, department_finishing, day_Monday, day_Tuesday, day_Wednesday, day_Thursday, day_Friday, day_Saturday, day_Sunday]])
         output=round(prediction[0],2)
+        
+        return render_template('index.html',prediction_text1="Target: {}".format(targeted_productivity))
+        return render_template('index.html',prediction_text2="Actual: {}".format(output))
+    
+    
         if output> targeted_productivity:
             return render_template('index.html',prediction_texts="Great Productivity")
         else:
