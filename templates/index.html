@@ -13,14 +13,14 @@
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Predictive analysis</h2>
 
-            <h3>Quarter</h3><br><select name="quarter" id="first" required="required">
+            <h3>Quarter: A portion of the month. A month was divided into four quarters. </h3><br><select name="quarter" id="first" required="required">
                 <option value=1>1</option>
                 <option value=2>2</option>
 		<option value=3>3</option>
                 <option value=4>4</option>
             </select>
 	    
-            <h3>Department</h3><br><select name="department" id="second" required="required">
+            <h3>Department: Associated department. </h3><br><select name="department" id="second" required="required">
                 <option value="sewing">Sewing</option>
                 <option value="finishing">Finishing</option>
             </select>
@@ -35,27 +35,27 @@
                 <option value="Sunday">Sunday</option>
             </select>
 
-            <h3>Team Number (between 1-12)</h3><br><input id="four" name="team" required="required">
+            <h3>Team Number (between 1-12): Associated team number. </h3><br><input id="four" name="team" required="required">
 	
-            <h3>Target</h3><br><input id="five" name="targeted_productivity" required="required">
+            <h3>Target: Targeted productivity set by the Authority. </h3><br><input id="five" name="targeted_productivity" required="required">
 
-            <h3>SMV</h3><input id="six" name="smv" required="required">
+            <h3>SMV: Standard Minute Value. </h3><input id="six" name="smv" required="required">
 
-            <h3>WIP</h3><br><input id="seven" name="wip" required="required">
+            <h3>WIP: Work in progress.</h3><br><input id="seven" name="wip" required="required">
 
-            <h3>Over Time</h3><br><input id="eight" name="over_time" required="required">
+            <h3>Over Time: Amount of overtime by each team(in mins). </h3><br><input id="eight" name="over_time" required="required">
 
             <h3>Incentives</h3><br><input id="nine" name="incentive" required="required">
 
-	    <h3>Idle Time</h3><br><input id="ten" name="idle_time" required="required">
+	    <h3>Idle Time: Amount of time when the production was interrupted.</h3><br><input id="ten" name="idle_time" required="required">
 
-	    <h3>Idle Men</h3><br><input id="eleven" name="idle_men" required="required">
+	    <h3>Idle Men: Number of workers who were idle due to production interruption.</h3><br><input id="eleven" name="idle_men" required="required">
 
-	    <h3>Number of Style Changes (0,1,2) </h3><br><input id="twelve" name="no_of_style_change" required="required">
+	    <h3>Number of Style Changes (0,1,2): Number of changes in the style of a particular product. </h3><br><input id="twelve" name="no_of_style_change" required="required">
 
-	    <h3>Number of Workers</h3><br><input id="twelve" name="no_of_workers" required="required">
+	    <h3>Number of Workers: Number of workers in the team. </h3><br><input id="twelve" name="no_of_workers" required="required">
 
-            <br><br><button id="sub" type="submit ">Calculate the Productivity</button>
+            <br><br><button id="sub" type="submit ">Calculate</button>
             <br>
 
         </form>
