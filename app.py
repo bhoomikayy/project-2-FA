@@ -147,7 +147,7 @@ def predict():
         else:
             return render_template('index.html',prediction_text="Poor Productivitywith actual productivity of {} and target of {}".format(output, targeted_productivity))
     else:
-        return render_template('index.html')
+        return render_template('index.html', ,prediction_text="NA")
 
 if __name__=="__main__":
     app.run(debug=True)
